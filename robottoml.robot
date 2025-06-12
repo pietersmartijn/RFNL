@@ -15,4 +15,4 @@ T1
 T2
     [Documentation]    retry
     Log To Console    ${DB_USERNAME},${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}
-    Fail    msg=errormessage
+    Fail    msg=Deze test gaat fout
