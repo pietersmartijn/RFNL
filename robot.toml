@@ -1,0 +1,34 @@
+# Global variables
+[variables]
+DB_HOST = "123.456.0.1"
+DB_PORT = "5488"
+DB_DATABASE = "ROBOTCODE"
+
+# onjuist gebruik profile
+[profiles.fout.variables]
+DB_USERNAME = "fout"
+
+# werkend maar niet erg handig
+[profiles.nieterghandig.variables]
+DB_USERNAME = "nieterghandig"
+DB_HOST = "123.456.0.1"
+DB_PORT = "5488"
+DB_DATABASE = "ROBOTCODE"
+
+# extended variables
+[profiles.localusername.extend-variables]
+DB_USERNAME = "local_username"
+
+[profiles.localhost.extend-variables]
+DB_HOST = "localhost"
+
+# profiles combineren
+[profiles.local]
+inherits = ["localusername", "localhost"]
+
+# operating system
+[profiles.windows]
+enabled.if = "platform.system() == 'Windows'"
+inherits = ["localusername", "localhost"]
+[profiles.windows.extend-listeners]
+RetryFailed = ["1"]

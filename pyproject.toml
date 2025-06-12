@@ -1,0 +1,19 @@
+[project]
+name = "rfnl"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Martijn Pieters",email = "martijn.pieters@kadaster.nl"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "robotframework (>=7.3,<8.0)",
+    "robotcode-runner (>=1.2.0,<2.0.0)",
+    "robotframework-retryfailed (>=0.2.0,<0.3.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
